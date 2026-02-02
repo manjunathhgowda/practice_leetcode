@@ -1,5 +1,7 @@
 class Solution:
     def convert(self, s, numRows):
+        if numRows <= 1 or numRows >= len(s):
+            return s
         rows = [""] * numRows
         index = 0       # current row
         direction = 1   # 1 = moving down, -1 = moving up
